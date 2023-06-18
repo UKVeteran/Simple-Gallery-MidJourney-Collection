@@ -1,0 +1,47 @@
+.simple_gallery {
+        height: 571px;
+        width: 1225px;
+        position:relative;
+        margin: 0 auto;
+    }
+    /* First displayed image */
+    .gallery-bg {
+        display: block;
+        margin-left: 35px;
+        position: absolute;
+    }
+    .simple_gallery img {
+        border: 2px solid #f2f2f2;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+        box-sizing: initial;
+    }
+    /* Thumbnails */
+    .simple_gallery a > img {
+        margin-bottom: 6px;
+        float:right;
+        width: 117px;
+        height: 88px;
+        display: block;
+        clear: both;
+    }
+    /* Large rollover image styles */
+    .simple_gallery span{
+        visibility:hidden;
+        position:absolute;
+        width: 571px;
+        height: 451px;
+        left:-1000px;    /* prevents the browser to show scroll bar at bottom*/
+    }
+    .simple_gallery a:link span, .simple_gallery a:visited span, .simple_gallery a:active span {
+        visibility:hidden;
+    }
+    .simple_gallery a:hover span{
+        /*CSS for enlarged image*/
+        visibility: visible;
+        position: absolute;
+        left: 35px;
+        /*position where enlarged image is placed horizontally */
+        top: 0;
+        z-index: 50;
+    }
